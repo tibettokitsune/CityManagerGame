@@ -1,4 +1,4 @@
-using _Game.Scripts.Infrastructure;
+using Game.Scripts.Infrastructure;
 
 namespace Game.Infrastructure.Installers
 {

@@ -1,4 +1,4 @@
-using _Game.Scripts.Infrastructure.Configs;
+using Game.Scripts.Infrastructure.Configs;
 using Zenject;
 
 namespace Game.Infrastructure.Installers

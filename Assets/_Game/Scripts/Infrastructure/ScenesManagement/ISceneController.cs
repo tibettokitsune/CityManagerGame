@@ -4,5 +4,6 @@ namespace Game.Infrastructure.SceneManagement
     {
         public void LoadMenu();
         
+        public void StartTestGame();
     }
 }

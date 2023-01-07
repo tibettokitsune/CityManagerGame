@@ -1,8 +1,7 @@
-using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace _Game.Scripts.UI
+namespace Game.Scripts.UI
 {
     [RequireComponent(typeof(CanvasGroup))]
     public class UIScreen : MonoBehaviour

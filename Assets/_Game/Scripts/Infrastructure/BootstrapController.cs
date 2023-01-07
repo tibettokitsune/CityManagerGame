@@ -1,7 +1,7 @@
 using Game.Infrastructure.SceneManagement;
 using Zenject;
 
-namespace _Game.Scripts.Infrastructure
+namespace Game.Scripts.Infrastructure
 {
     public interface IBootstrapController
     {
