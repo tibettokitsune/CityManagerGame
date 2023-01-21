@@ -75,3 +75,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesConfig: {fileID: 11400000, guid: b298afd41a289418f852f7d5e5165e69, type: 2}
+  mapConfig: {fileID: 11400000, guid: 4fc2bfff21d594279865cd567253f10a, type: 2}
