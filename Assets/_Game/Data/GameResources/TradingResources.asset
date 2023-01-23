@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a030fed4d6b4edf93e0399ecb0680d9, type: 3}
   m_Name: TradingResources
   m_EditorClassIdentifier: 
-  resourceName: Gold
+  resourceName: Market resources
   icon: {fileID: 21300000, guid: f6b68783eb2344a8a8ae7badfbdeae17, type: 3}
   view: {fileID: 0}

@@ -8,10 +8,12 @@ namespace Game.Infrastructure.Installers
     {
         public ScenesConfig scenesConfig;
         public MapConfig mapConfig;
+        public GameItemsConfig gameItemsConfig;
         public override void InstallBindings()
         {
             Container.BindInstance(scenesConfig);
             Container.BindInstance(mapConfig);
+            Container.BindInstance(gameItemsConfig);
         }
     }
 }
