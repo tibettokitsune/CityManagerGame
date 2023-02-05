@@ -18,9 +18,11 @@ namespace _Game.Scripts.GamePlay.UI
 
 
         [SerializeField] private AnimationCurve _curve;
-        
+        [SerializeField] private ResourceUICell _resourceCellPrefab;
+
+        private const float PriceLengthScale = 0.7f;
         public bool IsActive { get; private set; }
-        public void Fill(float rotationAngle, float widthAngle, Sprite sprite, string name, Action onClick)
+        public void Fill(float rotationAngle, float widthAngle, Sprite sprite, string name, Price[] prices)
         {
             icon.sprite = sprite;
             icon.SetNativeSize();
@@ -33,6 +35,20 @@ namespace _Game.Scripts.GamePlay.UI
             var y = Mathf.Sin(radians);
             
             interactiveRoot.anchoredPosition = new Vector2(x, y) * radius;
+
+            
+            for (int i = 0; i < prices.Length; i++)
+            {
+                var cell = Instantiate(_resourceCellPrefab, interactiveRoot.transform.parent);
+                
+                cell.Fill(prices[i].resourceAsset);
+                cell.UpdateText(prices[i].number);
+
+                var rt = (RectTransform) cell.transform;
+
+                rt.anchoredPosition = interactiveRoot.anchoredPosition + new Vector2(x, y) * radius +
+                                      Vector2.down * i * (float)prices.Length / 2f * PriceLengthScale;
+            }
         }
 
         public void Scale(float scale, RectTransform mousePointer, float impactRadius)

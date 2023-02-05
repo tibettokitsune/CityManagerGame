@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: GameItems
   m_EditorClassIdentifier: 
   resourceAssets:
+  - {fileID: 11400000, guid: 1f0e1a2c8df2e46bb959d570d13ac3c6, type: 2}
   - {fileID: 11400000, guid: 4d38f0faf86724e3abc7e27af6c40f7c, type: 2}
   - {fileID: 11400000, guid: 3c80012c482fe418eae2d626d72790a3, type: 2}
-  - {fileID: 11400000, guid: 1f0e1a2c8df2e46bb959d570d13ac3c6, type: 2}
   buildingAreaAssets:
   - {fileID: 11400000, guid: fb2bd377f39ae4e8e9c9a459428ac860, type: 2}
   - {fileID: 11400000, guid: 6e7b0502099a044b8b22e1fff5b9fc61, type: 2}

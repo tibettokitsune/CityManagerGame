@@ -32,6 +32,11 @@ namespace Game.Scripts.Infrastructure
             {
                 resources = new int[_itemsConfig.resourceAssets.Length]
             };
+
+            for (int i = 0; i < _itemsConfig.resourceAssets.Length; i++)
+            {
+                PlayerData.resources[i] = 100;
+            }
         }
 
         public bool IncrementResource(int value, ResourceAsset resourceAsset)

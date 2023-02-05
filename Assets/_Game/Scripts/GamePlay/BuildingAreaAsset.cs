@@ -25,7 +25,7 @@ namespace _Game.Scripts.GamePlay
     public struct BuildingAreaUpgrade
     {
         public Sprite icon;
-        public Price price;
+        public Price[] price;
         public Transform cellView;
 
         public Vector3 offset;

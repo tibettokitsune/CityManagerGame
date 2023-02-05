@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using DG.Tweening;
+using Game.Scripts.Infrastructure;
 using Game.Scripts.Map;
 using Game.Scripts.UI;
 using ModestTree;
@@ -16,6 +17,7 @@ namespace _Game.Scripts.GamePlay.UI
     public class BuildingJoystickController : UIScreen
     {
         [Inject] private IMapController _mapController;
+        [Inject] private IInputManager _inputManager;
         [SerializeField] private RectTransform root;
         [SerializeField] private Ease openEase;
         [SerializeField] private Ease closeEase;
@@ -41,10 +43,12 @@ namespace _Game.Scripts.GamePlay.UI
             _mapController.OnCellPointerDown.Subscribe(_ =>
             {
                 root.transform.position = Input.mousePosition;
-                OpenScreen();
+                // OpenScreen();
                 
                 Fill(_);
             }).AddTo(this);
+
+            _inputManager.OnTouch.Subscribe(_ => OpenScreen()).AddTo(this);
             //
             _mapController.OnCellPointerUp.Subscribe(_ =>
             {
@@ -84,11 +88,7 @@ namespace _Game.Scripts.GamePlay.UI
                 int j = i;
                 var cell = Instantiate(cellPrefab, root);
                 cell.Fill(localFillRect * j, localFillRect - dr, 
-                    assets[j].upgrades[0].icon, assets[j].regionName, 
-                    () =>
-                    {
-                        print("Click");
-                    });
+                    assets[j].upgrades[0].icon, assets[j].regionName, assets[j].upgrades[0].price);
                 _angles[i] = localFillRect * j;
                 
                 _cells.Add(cell);

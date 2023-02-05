@@ -17,7 +17,9 @@ MonoBehaviour:
   upgrades:
   - icon: {fileID: 21300000, guid: c3eae5401beff402a96afd269025b0ff, type: 3}
     price:
-      resourceAsset: {fileID: 11400000, guid: 1f0e1a2c8df2e46bb959d570d13ac3c6, type: 2}
+    - resourceAsset: {fileID: 11400000, guid: 1f0e1a2c8df2e46bb959d570d13ac3c6, type: 2}
+      number: 10
+    - resourceAsset: {fileID: 11400000, guid: 3c80012c482fe418eae2d626d72790a3, type: 2}
       number: 10
     cellView: {fileID: -8679921383154817045, guid: 9a62fc412aa224c1d8cb3d2520ac0a66,
       type: 3}

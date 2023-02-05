@@ -13,6 +13,7 @@ namespace Game.Infrastructure.Installers
             {
                 Container.BindInterfacesTo<SceneController>().AsSingle();
                 Container.BindInterfacesTo<BootstrapController>().AsSingle();
+                Container.BindInterfacesTo<InputManager>().AsSingle();
             }
         }
     }

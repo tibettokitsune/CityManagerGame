@@ -3,21 +3,13 @@ using Zenject;
 
 namespace Game.Scripts.Infrastructure
 {
-    public interface IBootstrapController
-    {
-        public void StartMenu();
-    }
-    public class BootstrapController : IBootstrapController, IInitializable
+    public class BootstrapController : IInitializable
     {
         [Inject] private ISceneController _sceneController;
-        public void StartMenu()
-        {
-            _sceneController.LoadMenu();
-        }
 
         public void Initialize()
         {
-            StartMenu();
+            _sceneController.LoadMenu();
         }
     }
 }
